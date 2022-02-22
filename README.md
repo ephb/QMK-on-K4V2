@@ -101,9 +101,9 @@ Depending on your layout, copy "nnnnnnnn                ckeychron_k4_rgb_v2_via_
  3.6. Remove the tweezers shorting the boot pins
 
 ## 4. Flash the Keyboard
- 6.1. Make sure you have picked SN32F24x for the device and 0x00 for qmk offset.
+ 4.1. Make sure you have picked SN32F24x for the device and 0x00 for qmk offset.
 
- 6.2. This is the point of no return, click “Flash QMK…” and choose the .bin file you created. It will flash as soon as you choose the file.
+ 4.2. This is the point of no return, click “Flash QMK…” and choose the .bin file you created. It will flash as soon as you choose the file.
 
 ## *Congratulations, you have flashed QMK into your K4!*
 
