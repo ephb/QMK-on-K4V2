@@ -1,8 +1,7 @@
-# QMK-on-K4V2
-Steps to build and flash SonixQMK for Keychron K4 V2 
-
 # Installing QMK on Keychron K4 V2 RGB
 This guide will walk you through the steps necessary to flashing SonixQMK on a Keychron K4 V2 RGB keyboard.
+
+Made possible by the efforts of [dexter93](https://github.com/dexter93/keychron-k4) and based on the documentation of [CanUnesi/QMK-on-K6](https://github.com/CanUnesi/QMK-on-K6) and [aathma2071/QMK-on-K2V2](https://github.com/aathma2071/QMK-on-K2V2).
 
 These steps are mostly the same as for other keyboards supported by SonixQMK and are documented to help others with the same keyboard to get started more easily.
 Fortunately the K4 V2 is one of the easiest to flash because the version and boot pins are located right under the space bar.
@@ -11,14 +10,11 @@ Even though repos exist for other models and the white backlit version, this gui
 
 **If you just want to use VIA or get started quickly with a default keymap, you can actually skip to [5. Instructions for VIA](#5-instructions-for-via)**
 
-This guide is made based on the documentation of [CanUnesi/QMK-on-K6](https://github.com/CanUnesi/QMK-on-K6) and [aathma2071/QMK-on-K2V2](https://github.com/aathma2071/QMK-on-K2V2).
-
 **There is a small chance that you may brick your keyboard in the flashing process, continue at your own risk. Use an appropriate cable, make sure you won’t lose power during flashing and follow the steps carefully.**
 
 **SonixQMK in its current incarnation (atleast for K2) does not support Bluetooth or very fancy RGB effects and flashing your keyboard will disable the bluetooth entirely.**
 
-Like @aathma2071 I have not tried reverting to the original firmware so proceed at your own risk.
-
+I have not tried reverting to the original firmware so proceed at your own risk.
 This guide assumes that you have the stock bootloader and not Sonix Jumploader.
 
 
