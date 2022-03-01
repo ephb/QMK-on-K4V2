@@ -6,7 +6,7 @@ Made possible by the efforts of [dexter93](https://github.com/dexter93/keychron-
 These steps are mostly the same as for other keyboards supported by SonixQMK and are documented to help others with the same keyboard to get started more easily.
 Fortunately the K4 V2 is one of the easiest to flash because the version and boot pins are located right under the space bar.
 
-Even though repos exist for other models and the white backlit version, this guide will only cover the K4 V2 RGB model.
+Even though repos exist for other models, this guide will only cover the K4 V2 RGB model.
 
 **If you just want to use VIA or get started quickly with a default keymap, you can actually skip to [5. Instructions for VIA](#5-instructions-for-via)**
 
@@ -79,7 +79,7 @@ Depending on your [keyboard layout](https://upload.wikimedia.org/wikipedia/commo
 
  2.10. Locate and copy the .bin file
 
-Depending on your layout, copy "nnnnnnnn                ckeychron_k4_rgb_v2_via_default_ansi.bin” or “keychron_k4_rgb_v2_via_default_iso.bin” to a folder for easily locating it later
+Depending on your layout, copy "keychron_k4_rgb_v2_via_default_ansi.bin” or “keychron_k4_rgb_v2_via_default_iso.bin” to a folder for easily locating it later
 
 ## 3. Checking Your MCU and Entering Boot Mode
  3.1. Remove the space bar key to view the version and boot pins
