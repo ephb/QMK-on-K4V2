@@ -1,5 +1,9 @@
+# Warning: This guide was outdated. The K4 has not been merged to the ***sn32_develop*** branch of SonixQMK yet. 
+You either have to use the former default branch ***sn32_master*** or use the branches from the open pull requests if you want to build the most recent version.
+I did only a quick edit, there might some things that are still outdated below. But it is possible to build the most recent version and have full VIA and RGB support.
+
 # Installing QMK on Keychron K4 V2 RGB
-This guide will walk you through the steps necessary to flashing SonixQMK on a Keychron K4 V2 RGB keyboard.
+This guide will walk you through the steps necessary to flashing [SonixQMK](https://github.com/SonixQMK/qmk_firmware) on a Keychron K4 V2 RGB keyboard.
 
 Made possible by the efforts of [dexter93](https://github.com/dexter93/keychron-k4) and based on the documentation of [CanUnesi/QMK-on-K6](https://github.com/CanUnesi/QMK-on-K6) and [aathma2071/QMK-on-K2V2](https://github.com/aathma2071/QMK-on-K2V2).
 
@@ -11,8 +15,6 @@ Even though repos exist for other models, this guide will only cover the K4 V2 R
 **If you just want to use VIA or get started quickly with a default keymap, you can actually skip to [5. Instructions for VIA](#5-instructions-for-via)**
 
 **There is a small chance that you may brick your keyboard in the flashing process, continue at your own risk. Use an appropriate cable, make sure you won’t lose power during flashing and follow the steps carefully.**
-
-**SonixQMK in its current incarnation (atleast for K2) does not support Bluetooth or very fancy RGB effects and flashing your keyboard will disable the bluetooth entirely.**
 
 I have not tried reverting to the original firmware so proceed at your own risk.
 This guide assumes that you have the stock bootloader and not Sonix Jumploader.
@@ -52,6 +54,17 @@ You can hit the windows key and type “QMK MSYS” to find the program
  2.4. Clone the SonixQMK repository
 
     git clone https://github.com/SonixQMK/qmk_firmware.git
+    git checkout sn32_master
+
+    or use this if you want to build the current version for an iso K4
+
+    git clone https://github.com/ephb/qmk_firmware.git
+    git checkout k4v2_update
+
+    or use this if you want to build the current version for an ansi K4
+    
+    git clone https://github.com/PythonDeployer/qmk_firmware_k4.git
+    
 
  2.5. Change directory to qmk_firmware
 
@@ -70,16 +83,17 @@ You can hit the windows key and type “QMK MSYS” to find the program
  2.8. Make default firmware
 
 Depending on your [keyboard layout](https://upload.wikimedia.org/wikipedia/commons/1/14/Physical_keyboard_layouts_comparison_ANSI_ISO.png):
+The last paramater is the keymap. Use either *default* or *via* here if you did not make your own. We will use via for this example.
 
-    make keychron/k4/rgb/v2:default_ansi
+    qmk compile -kb keychron/k4/rgb/v2/ansi -km via
     or
-    make keychron/k4/rgb/v2:default_iso
-
+    qmk compile -kb keychron/k4/rgb/v2/iso -km via
+    
  2.9. Navigate to the qmk directory
 
  2.10. Locate and copy the .bin file
 
-Depending on your layout, copy "keychron_k4_rgb_v2_via_default_ansi.bin” or “keychron_k4_rgb_v2_via_default_iso.bin” to a folder for easily locating it later
+Depending on your layout, copy "keychron_k4_rgb_v2_iso_via.bin” or “keychron_k4_rgb_v2_iso_via.bin” to a folder for easily locating it later
 
 ## 3. Checking Your MCU and Entering Boot Mode
  3.1. Remove the space bar key to view the version and boot pins
@@ -105,11 +119,12 @@ Depending on your layout, copy "keychron_k4_rgb_v2_via_default_ansi.bin” or �
 
 ## 5. Quick-Start Instructions for VIA
 
-**The SonixQMK build for Keychron K4v2 only emulates the EEPROM, this means that changes done in VIA are lost upon removing power from the board. If you want to have your keymap stored on the board you need to build and flash QMK with the keymap you have created.**
-
  5.1 Download VIA from [https://caniusevia.com/](https://caniusevia.com/)
  
- 5.2 Download the pre-compiled firmware archive from the most recent run from [here](https://github.com/SonixQMK/qmk_firmware/actions?query=branch%3Asn32+event%3Apush). And extract the firmware for the K4V2.
+ 5.2 PythonDeployer has a prebuilt binary for ansi here.
+ https://github.com/PythonDeployer/Keychron-k4-qmk/releases/tag/10.0
+
+ For iso version you have to build it yourself for now.
  
  5.3 Download via_ansi.json or via_iso.json from the corresponding sub-folder from [Sonix QMK keymaps](https://github.com/SonixQMK/qmk_firmware/tree/sn32/keyboards/keychron/k4/rgb/v2/keymaps) 
  
