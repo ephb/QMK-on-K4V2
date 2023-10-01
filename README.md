@@ -1,9 +1,13 @@
-# Warning: This guide was outdated. The K4 has not been merged to the ***sn32_develop*** branch of SonixQMK yet. 
-You either have to use the former default branch ***sn32_master*** or use the branches from the open pull requests if you want to build the most recent version.
-I did only a quick edit, there might some things that are still outdated below. But it is possible to build the most recent version and have full VIA and RGB support.
+# First a Warning. The K4 has been merged to the ***sn32_develop*** branch of SonixQMK but there are some issues. 
+Until it has been merged you should use the [branch](https://github.com/ephb/qmk_firmware/tree/k4v2_fixes) from my open pull request.
+The ANSI version does not currently build in sn32_develop and I made a few mistakes with the iso version.
+
+Some steps in this guide might be outdated. If you encounter issue please open an issue here on GitHub so I can help you and fix it for others.
+
 
 # Installing QMK on Keychron K4 V2 RGB
 This guide will walk you through the steps necessary to flashing [SonixQMK](https://github.com/SonixQMK/qmk_firmware) on a Keychron K4 V2 RGB keyboard.
+I have been using SonixQMK for more than 1.5 years now. Everything works but bluetooth. 
 
 Made possible by the efforts of [dexter93](https://github.com/dexter93/keychron-k4) and based on the documentation of [CanUnesi/QMK-on-K6](https://github.com/CanUnesi/QMK-on-K6) and [aathma2071/QMK-on-K2V2](https://github.com/aathma2071/QMK-on-K2V2).
 
