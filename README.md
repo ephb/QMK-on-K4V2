@@ -131,8 +131,8 @@ Prebuilt binaries that are built last year are available here.
  
  5.3 Flash: Follow steps 3 and 4 using the .bin file you extracted.
 
- 5.4  Download k4_via_ansi.json or k4_iso.json from the corresponding sub-folders here: [ansi](https://github.com/SonixQMK/qmk_firmware/blob/sn32_develop/keyboards/keychron/k4/rgb/v2/ansi/keymaps/via/k4_via_ansi.json)
-  or [iso]([url](https://github.com/SonixQMK/qmk_firmware/blob/sn32_develop/keyboards/keychron/k4/rgb/v2/via_json/k4_iso.json))
+ 5.4  Download the json files for VIA here: [ansi](https://raw.githubusercontent.com/ephb/qmk_firmware/refs/heads/k4v2_fixes/keyboards/keychron/k4/rgb/v2/ansi/keymaps/via/k4_via_ansi.json)
+  or [iso](https://raw.githubusercontent.com/ephb/qmk_firmware/refs/heads/k4v2_fixes/keyboards/keychron/k4/rgb/v2/via_json/k4_iso.json)
 
  5.5 Open VIA and navigate to settings.
 
