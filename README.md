@@ -125,8 +125,8 @@ Depending on your layout, copy "keychron_k4_rgb_v2_iso_via.bin” or “keychron
 
  5.1 Download VIA [here](https://github.com/the-via/releases/releases/). Note that VIA 3.0 is quite old by now but works fine for me.
  
- 5.2 Download Prebuilt binaries
-[ https://github.com/PythonDeployer/Keychron-k4-qmk/releases/tag/10.0](https://github.com/ephb/QMK-on-K4V2/releases/tag/10bbc1f)
+ 5.2 Download Prebuilt binaries from
+[Releases](https://github.com/ephb/QMK-on-K4V2/releases/tag/10bbc1f)
 Prebuilt binaries that are built last year are available here.
  
  5.3 Flash: Follow steps 3 and 4 using the .bin file you extracted.
